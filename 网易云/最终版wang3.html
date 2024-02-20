@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    .top1 {
+      width: auto;
+      height: 65px;
+      background: hsl(16, 81%, 50%);
+    }
+
+    .top2 {
+      float: left;
+      width: 180px;
+      height: 70px;
+      background-position: 0 13px;
+      background-image: url(/网易云/1.images/logo.jpg);
+      background-repeat: no-repeat;
+    }
+
+    .top3 {
+      float: right;
+      width: 525px;
+      height: 70px;
+      background-position: 360px 13px;
+      background-image: url(/网易云/1.images/tuxiang.jpg);
+      background-repeat: no-repeat;
+    }
+
+    .zhong1 {
+      padding-left: 265px;
+      height: 50px;
+      /* background-color: aqua; */
+      font-size: 18px;
+      font-family: normal;
+      line-height: 45px;
+    }
+
+    .zhong1 span {
+      margin-left: 18px;
+      color: rgb(125, 111, 111);
+    }
+
+    .zhong2 {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      align-items: center;
+    }
+
+    .zhong2 li {
+      width: 8px;
+      height: 8px;
+      margin: 4px;
+      border-radius: 50%;
+      background: #fff;
+      opacity: 0.4;
+      cursor: pointer;
+    }
+
+    .sliderWrap {
+      /* float:right; */
+      width: 1000px;
+      height: 285px;
+      padding: 2px 13px;
+      background: rgb(23, 114, 94);
+      padding-left: 138px;
+      margin-left: 500px;
+    }
+
+    .sliderWrap .wrap {
+      width: 982px;
+      height: 285px;
+      margin: 0 auto;
+    }
+
+    /* 小点 */
+    .slider_Dots {
+      width: 730px;
+      height: 20px;
+      background: hub(168, 166, 1%);
+      margin-left: 967px;
+    }
+
+    .slider_Dots a {
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      background: url(/网易云/1.images/xiaodian.png) no-repeat;
+      background-size: 18px 16px
+    }
+    .cebian a{
+      display: block;
+    width: 200px;
+  height: 20px;
+border-color:gray;
+font-size: 18px;
+text-decoration: none;
+text-indent: 2em;
+color: black;
+ padding-top: 150px; 
+
+}
+.cebian a:hover{
+  border-color: gray;
+}
+.cebian{
+background-color: #fdfafa;
+width: 250px;
+}
+  </style>
+</head>
+
+<body>
+  <div class="top1">
+    <div class="top2"></div>
+    <div class="top3"></div>
+  </div>
+  <div class="zhong1">
+    <span>个性推荐</span>
+    <span>专属定制</span>
+    <span>歌单</span>
+    <span>排行榜</span>
+    <span>歌手</span>
+    <span>最新音乐</span>
+  </div>
+  
+  <!-- 轮番图 -->
+  <div class="sliderWrap">
+    <div class="wrap">
+      <img src="/网易云/1.images/wyy1.png" alt=""style="width:730px;display: block;" > 
+    </div>
+  </div>
+  <!-- 小点 -->
+  <div class="slider_Dots">
+    <a href="#"></a>
+    <a href="#"></a>
+    <a href="#"></a>
+    <a href="#"></a>
+    <a href="#"></a>
+    <a href="#"></a>
+  </div>
+  <!-- 侧边栏 -->
+  <div class="cebian">
+    <a href="#" >发现音乐</a>
+    <a href="#">播客</a>
+    <a href="#">视频</a>
+    <a href="#" >关注</a>
+    <a href="#" >直播</a>
+    <a href="#" >私人漫游</a>
+    <a href="#">我的音乐</a>
+    <a href="#">我喜欢的音乐</a>
+    <a href="#" >本地与下载</a>
+    <a href="#">最近播放</a>
+    <a href="#" >我的音乐乐盘</a>
+    <a href="#">我的播客</a>
+    <a href="#" >我的收藏</a>
+  </div>
+  <script>
+      const tuPianJi = [
+        { url: '/网易云/1.images/wyy1.png' },
+        { url: '/网易云/1.images/wyy2.png' },
+         { url: '/网易云/1.images/wyy3.png' },
+         { url: '/网易云/1.images/wyy4.png' },
+         { url: '/网易云/1.images/wyy5.png' },
+         { url: '/网易云/1.images/wyy6.png' },
+      ]
+       //获取元素
+     const img=document.querySelector('.wrap img')
+     let i = 0
+     //开启定时器
+     setInterval(function(){
+     i++
+     img.src=`/网易云/1.images/wyy${i}.png`
+     if(i===6)
+     i=0
+     },1100)
+
+  </script>
+
+
+</body>
+
+</html>
